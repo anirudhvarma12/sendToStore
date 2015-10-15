@@ -4,7 +4,7 @@ A very small Javascript to send your users to their device specific app store. C
 # Usage
 ## Import the file
 ```
-<script type="text/javascript" src="appredir.min.js"></script>
+<script type="text/javascript" src="sendToStore.min.js"></script>
 ```
 ## Configure the object
 ```
