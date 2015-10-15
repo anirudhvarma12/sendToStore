@@ -17,6 +17,12 @@ asConfig.noApp = "http://lambdaapps.in/";
 ```
 asConfig.redirect();
 ```
+
+## Get the relevant link
+If you want to get the link separately, you can get it like this.
+```
+asConfig.getStoreLink();
+```
 *For the sake of the users sanity, its recommended that you redirect on click of a button, instead of redirecting them when the page loads*
 
 # LICENSE
