@@ -1,4 +1,4 @@
-var AppStoreConfig = function () {
+function AppStoreConfig() {
 
 };
 
@@ -29,9 +29,5 @@ AppStoreConfig.prototype.getStoreLink = function () {
 
 
 AppStoreConfig.prototype.isDevice = function (name) {
-    if (navigator.userAgent.toLowerCase().indexOf(name) > -1) {
-        return true;
-    } else {
-        return false;
-    }
+    return (navigator.userAgent.toLowerCase().indexOf(name) > -1);
 };

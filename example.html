@@ -2,13 +2,13 @@
 
 <head>
     <title>Example</title>
-    <script type="text/javascript" src="appredir.js"></script>
+    <script type="text/javascript" src="sendToStore.js"></script>
 </head>
 
 <body>
-    <a href="#" onClick="sendToStore();">Click here to test (no link for iOS)</a>
+    <a href="#" id="primaryRedirect">Click here to test (no link for iOS)</a>
     <br>
-    <a href="#" onClick="printLink();">Print Link</a>
+    <a href="#" id="printUrl">Print Link</a>
     <br>
     <span id="appLink"></span>
     <script type="application/javascript">
@@ -16,6 +16,13 @@
         asConfig.windows = "https://www.microsoft.com/en-us/store/games/crowdspell-beta/9nblggh1jtls";
         asConfig.android = "https://play.google.com/store/apps/details?id=com.lambda.crowdspell";
         asConfig.noApp = "http://lambdaapps.in/";
+
+        var link = document.getElementById('primaryRedirect');
+        link.addEventListener('click', sendToStore);
+
+        var printUrlLink = document.getElementById('printUrl');
+        printUrlLink.addEventListener('click', printLink);
+
 
         function sendToStore() {
             asConfig.redirect();
