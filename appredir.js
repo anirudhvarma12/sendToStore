@@ -9,18 +9,22 @@ AppStoreConfig.prototype.redirect = function () {
         } else {
             window.location.href = noApp;
         }
-    }
+    };
 
+    sendToStore(this.getStoreLink(), this.noApp);
+};
+
+AppStoreConfig.prototype.getStoreLink = function () {
     if (this.isDevice("windows")) {
-        sendToStore(this.windows, this.noApp);
+        return (this.windows);
     } else if (this.isDevice("android")) {
-        sendToStore(this.android, this.noApp);
+        return (this.android);
     } else if (this.isDevice("ipad")) {
-        sendToStore(this.ios, this.noApp);
+        return (this.ios);
     } else if (this.isDevice("iphone")) {
-        sendToStore(this.iphone, this.noApp);
+        return (this.iphone);
     }
-}
+};
 
 
 
@@ -30,4 +34,4 @@ AppStoreConfig.prototype.isDevice = function (name) {
     } else {
         return false;
     }
-}
+};

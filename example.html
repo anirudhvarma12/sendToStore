@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Example</title>
+    <script type="text/javascript" src="appredir.js"></script>
+</head>
+
+<body>
+    <a href="#" onClick="sendToStore();">Click here to test (no link for iOS)</a>
+    <br>
+    <a href="#" onClick="printLink();">Print Link</a>
+    <br>
+    <span id="appLink"></span>
+    <script type="application/javascript">
+        var asConfig = new AppStoreConfig();
+        asConfig.windows = "https://www.microsoft.com/en-us/store/games/crowdspell-beta/9nblggh1jtls";
+        asConfig.android = "https://play.google.com/store/apps/details?id=com.lambda.crowdspell";
+        asConfig.noApp = "http://lambdaapps.in/";
+
+        function sendToStore() {
+            asConfig.redirect();
+        }
+
+        function printLink() {
+            document.getElementById("appLink").textContent = asConfig.getStoreLink();
+        }
+    </script>
+</body>
+
+</html>
