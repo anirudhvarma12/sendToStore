@@ -17,7 +17,7 @@ asConfig.noApp = "http://lambdaapps.in/";
 ```
 asConfig.redirect();
 ```
-* For the sake of the users sanity, its recommended that you redirect on click of a button, instead of redirecting them when the page loads *
+*For the sake of the users sanity, its recommended that you redirect on click of a button, instead of redirecting them when the page loads*
 
 # LICENSE
 The MIT License (MIT), see `License` for details.
